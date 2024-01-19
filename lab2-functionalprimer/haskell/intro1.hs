@@ -32,3 +32,6 @@ r12 = print [1..3] --prints numbers within this range
 
 main :: IO ()
 main = pure ()
+
+
+-- :t r1  't' is used for Type signatures. It tells you the type of the variable
