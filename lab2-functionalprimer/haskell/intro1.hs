@@ -35,3 +35,4 @@ main = pure ()
 
 
 -- :t r1  't' is used for Type signatures. It tells you the type of the variable
+-- :q to get out of ghci.
