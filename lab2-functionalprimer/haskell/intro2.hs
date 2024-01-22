@@ -4,6 +4,7 @@ module Intro2 where
 name = "Alice"
 -- "if" has a special syntax but otherwise a typed version of Lisp's "if":
 name2 = if name /= "" then name else "no name"
+-- if the 'name' is equal to an empty string then write 'no name' if not then assign 'name' to 'name2'
 
 pname3 = print "Bob"
 
@@ -33,6 +34,7 @@ main =
 
 -- generic string conversion, using a Java-friendly name:
 toString value = show value
+--converts a value to its string representation using the show function.
 
 -- string concatenation:
 greet1 = "hello " ++ name ++ (toString 123)
