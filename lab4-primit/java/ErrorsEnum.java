@@ -34,24 +34,24 @@ public class ErrorsEnum
   
     private static Result error2Result(Error e)
     {
-        Result result = null;
+        Error error = null;
         
         switch (e) {
-        case FP_ROUNDING:
-            result = Result.A_BIT_DIFFERENT;
+        case  A_BIT_DIFFERENT:
+            error = Error.FP_ROUNDING;
             break;
-        case FP_OVERFLOW:
-            result = Result.INFINITY;
+        case INFINITY:
+            error = Error.FP_OVERFLOW;
             break;
-        case FP_UNDERFLOW:
-            result = Result.ZERO;
+        case ZERO:
+            error = Error.FP_UNDERFLOW;
             break;
-        case INT_OVERFLOW:
-            result = Result.VERY_DIFFERENT;
+        case VERY_DIFFERENT:
+            error = Error.INT_OVERFLOW;
             break;
         }
         
-        return result;
+        return error;
     }
 
     public static void main(String[] args)
