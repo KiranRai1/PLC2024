@@ -38,12 +38,12 @@ console.log('Result list: ', Object.values(Result_enumobj));
 var validArg = false;
 while(!validArg){
     var input = prompt("Input: ");
-    let result = result2Result(input); // change to error 
-    if (Object.values(Result_enumobj).includes(result)){
+    let err= result2Result(input); // change to error 
+    if (Object.values(Error_enumobj).includes(err)){
         validArg = true;
 		console.log(input + " results in " + result2Result(input));
     }
     else{
-        console.log(result);
+        console.log(err);
     }
 }
