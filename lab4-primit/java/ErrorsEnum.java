@@ -32,7 +32,7 @@ public class ErrorsEnum
         return result;
     }
   
-    private static Result error2Result(Error e)
+    private static Error result2Error(Result e)
     {
         Error error = null;
         
@@ -56,14 +56,16 @@ public class ErrorsEnum
 
     public static void main(String[] args)
     {
-        System.out.print("Known errors = ");
-        for (Error e : EnumSet.allOf(Error.class)) 
+        System.out.print("Known results = ");
+        for (Result r : EnumSet.allOf(Result.class)) 
         {
-            System.out.print(e + " ");
+            System.out.print(r + " ");
+            // e: This is an enumerated value (symbol). In Java, when an enumerated value is concatenated with a string using the + operator, its toString() method is automatically invoked to convert it to a string representation. 
+          // + " ": This concatenates a space character to the string representation of the enumerated value e, ensuring a space is printed after the value.
         }
         System.out.println();
         
-        Error e = getEnumElement("error", Error.class);
-        System.out.println(e + " results in: " + error2Result(e));
+        Result r = getEnumElement("result", Result.class);
+        System.out.println(r + " results in: " + result2Error(r));
     }
 }

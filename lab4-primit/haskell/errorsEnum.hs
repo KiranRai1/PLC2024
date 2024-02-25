@@ -8,7 +8,8 @@ main =
     putStrLn ("known errors = " ++ show allErrors)
     error <- getElement "error"
     putStrLn (show error ++ " results in: " ++ show (error2Result error))
-    
+    -- The show function in Haskell is used to convert a value to its string representation.
+
 initialiseIO =
     do
     hSetBuffering stdout NoBuffering
